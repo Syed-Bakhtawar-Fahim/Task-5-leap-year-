@@ -1,0 +1,58 @@
+   <!DOCTYPE html>
+    <html>
+      
+    <head>
+        <title>
+            Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar. 
+        </title>
+    </head>
+      <style>
+
+          body{
+              background-color: rgb(0, 255, 98);
+          }
+          center{
+              font-size: 1.4rem;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+          }
+
+          input{
+              border: none;
+              border-bottom: 1px solid red;
+              font-size: 1rem;
+
+          }
+
+          #button{
+             border: none;
+             padding: 6px 8px;
+            font-weight: 400;
+            background-color: rgb(0, 204, 255);
+            border-radius: 10px;
+            cursor: pointer;
+
+          }
+      </style>
+    <body>
+        <center>
+        Input Year To Check: <input type="text" id = "year"/>
+          
+        <input type="button" id="button" onClick="isLeapYear()"
+                value="Check Leap Year">
+          
+        <p id="GFG"></p>
+          
+    </center>
+        <script>
+            function isLeapYear() {
+                var year= document.getElementById("year").value;
+                  
+                document.getElementById("GFG").innerHTML 
+                    = (year % 100 === 0) ? (year % 400 === 0)
+                                         : (year % 4 === 0);
+            }
+        </script>
+    </body>
+      
+    </html> 
